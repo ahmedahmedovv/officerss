@@ -1,0 +1,24 @@
+# Core dependencies
+feedparser>=6.0.0
+pyyaml>=6.0.0
+aiohttp>=3.8.0
+tenacity>=8.0.0
+flask>=2.0.0
+
+# Machine learning and NLP
+torch>=2.0.0
+transformers>=4.30.0
+sentencepiece>=0.1.99
+
+# Type hints and development
+typing-extensions>=4.0.0
+mypy>=1.0.0
+
+# Async support
+asyncio>=3.4.3
+
+# HTTP client
+requests>=2.31.0
+
+# Logging and monitoring
+python-json-logger>=2.0.0

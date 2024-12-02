@@ -1,0 +1,28 @@
+# Input/Output paths
+input_file: '../data/translated_news_articles.json'
+output_file: '../data/categorized_news.json'
+cache_file: '../cache/category_cache.json'
+
+# Classification settings
+categories:
+  - 'Politics'
+  - 'Military'
+  - 'Economy'
+  - 'Technology'
+  - 'Sports'
+  - 'Culture'
+  - 'International'
+
+# Model settings
+model_name: 'facebook/bart-large-mnli'
+device: 'auto'  # 'cuda' for GPU, 'cpu' for CPU, 'auto' to detect automatically
+batch_size: 8
+
+# Logging settings
+log_file: '../logs/category.log'
+
+# Cache settings
+cache_save_interval: 100  # Save cache every 100 classifications
+
+# Parallel processing settings
+max_workers: 32  # Adjust based on your CPU 

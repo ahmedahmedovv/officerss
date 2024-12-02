@@ -1,0 +1,41 @@
+# Input/Output paths
+input_file: '../data/news_articles.json'
+output_file: '../data/translated_news_articles.json'
+cache_file: '../cache/translation_cache.json'
+
+# Translation settings
+target_language: 'en'
+source_languages: ['auto']
+batch_size: 50
+
+# Fields to translate
+translate_fields:
+  - 'title'
+  - 'summary'
+
+# Validation settings
+min_text_length: 3
+max_retries: 3
+retry_delay: 1 
+
+log_file: "../logs/translator.log"
+
+# Cache settings
+cache_save_interval: 50  # Save cache every 50 translations
+
+# Add more configuration options
+translation_settings:
+  quality_checks:
+    min_length_ratio: 0.5
+    max_length_ratio: 2.0
+    max_word_repetition: 3
+    
+  cache_settings:
+    enable_backup: true
+    backup_interval: 100
+    max_cache_size: 10000
+    
+  network_settings:
+    timeout: 30
+    connection_retries: 3
+    base_retry_delay: 1
